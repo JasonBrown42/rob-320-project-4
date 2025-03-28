@@ -70,7 +70,45 @@ Eigen::Affine3d Joint::get_transform() const {
     /**
      * TODO: Get the transform of the joint.
      */
-    return Eigen::Affine3d::Identity();
+    Eigen::Affine3d out;
+    out = Eigen::Affine3d::Identity();
+
+    if(type == FIXED){
+        //Fixed code here
+        out = out;
+    }
+    else if(type == REVOLUTE){
+        //revolute code here
+        Eigen::Matrix3d mat = Eigen::Matrix3d::Identity();
+        mat = Eigen::AngleAxisd(q, axis);        
+        out = out*mat;
+    }
+    else if(type == PRISMATIC){    
+        //prismatic code here
+        Eigen::Translation3d trans = Eigen::Translation3d(axis * Eigen::Scaling(q));
+        out = trans * out;
+    }
+    else if(type == CONTINUOUS){
+        double q_temp = q;
+        while(q_temp < 0 || q_temp > 2.0*M_PI){
+            if(q_temp < 0){
+                q_temp += 2.0*M_PI;
+            }
+            else{
+                q_temp -= 2.0*M_PI;
+            }
+        }
+        Eigen::Matrix3d mat = Eigen::Matrix3d::Identity();
+        mat = Eigen::AngleAxisd(q_temp, axis);        
+        out = out*mat;
+    }
+
+    
+    
+    // Eigen::Affine3d rot_aff = mat;
+    // out = origin;//* mat;//rot_aff;
+    return out;
+    //Eigen::Affine3d::Identity();
 }
 
 void Joint::set_state(double q) { this->q = q; }

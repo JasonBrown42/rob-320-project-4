@@ -129,6 +129,7 @@ TEST(JointTest, GetTransformRevolute) {
                 "child_link", 1.0, -1.0);
     joint.set_state(0.5);
     Eigen::Affine3d transform = joint.get_origin() * joint.get_transform();
+    std::cout << transform.matrix() << std::endl;
 
 
     Eigen::Affine3d expected;

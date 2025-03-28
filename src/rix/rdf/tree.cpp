@@ -233,7 +233,7 @@ rix::msg::geometry::TF Tree::TF() {
     /**
      * TODO: Generate a TF message from the tree.
      */
-
+    
     return rix::msg::geometry::TF();
 }
 
