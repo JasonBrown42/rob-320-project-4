@@ -15,6 +15,7 @@ using UInt32 = rix::msg::standard::UInt32;
 
 void service_callback(const String &request, UInt32 &response) {
     // TODO: Take the XOR checksum of the input string and store it in response.data
+    
 
 }   
 

@@ -25,8 +25,9 @@ set(INCLUDE_DIRS
 
 # Define libraries
 set(RIX_LIBS
-    ${CMAKE_SOURCE_DIR}/lib/librixutil.a
+    
     ${CMAKE_SOURCE_DIR}/lib/librixcore.a
+    ${CMAKE_SOURCE_DIR}/lib/librixutil.a
     ${CMAKE_SOURCE_DIR}/lib/librixipc.a
 )
 

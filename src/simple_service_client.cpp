@@ -6,8 +6,8 @@
 #include "rix/msg/standard/String.hpp"
 #include "rix/msg/standard/UInt32.hpp"
 
-using namespace rix::core;
 using namespace rix::util;
+using namespace rix::core;
 
 
 using String = rix::msg::standard::String;
@@ -15,7 +15,8 @@ using UInt32 = rix::msg::standard::UInt32;
 
 int main() {
     // TODO: Initialize the node with name "srv_client", IP address "127.0.0.1", and port RIX_HUB_PORT
-
+    Node client;
+    client.init("srv_client", "127.0.0.1", RIX_HUB_PORT);
     // TODO: Create a service client for the service "xor_checksum"
 
     // TODO: Create a String message "Hello, World!"
