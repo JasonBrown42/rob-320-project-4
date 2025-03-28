@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <iostream>
 #include <string>
+#include <mutex>
 
 #include "rix/util/timing.hpp"
 

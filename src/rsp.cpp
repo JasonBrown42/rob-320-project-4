@@ -34,11 +34,13 @@ int main(int argc, char **argv)
     CLParser parser("tf_publisher", "Publishes header messages");
     parser.add_arg(CLParser::Arg("jrdf", "Path to JRDF file", '1'));
     parser.add_opt(CLParser::Opt("ip", "i", "RIX Hub IP Address", "127.0.0.1", "", '1'));
+    parser.add_opt(CLParser::Opt("rate", "r", "Max publish rate in rate", "20", "", '1'));
     parser.parse(argc, argv);
 
     std::string jrdf_file = parser.get_arg("jrdf").front();
     std::string hub_ip = parser.get_opt("ip").front();
-
+    double rate = std::stod(parser.get_opt("rate").front());
+    
     /**
      * TODO: Implement the Robot State Publisher
      */

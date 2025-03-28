@@ -134,7 +134,7 @@ bool compare_js_from_offset(const std::vector<JS> &sol_js_msgs, const std::vecto
 int main() {
 
     std::vector<JS> sol_js_msgs;
-    deserialize_js_from_file("test/sol_js_msgs.bin", sol_js_msgs);
+    deserialize_js_from_file("test/bin/sol_js_msgs.bin", sol_js_msgs);
 
     std::vector<JS> test_js_msgs;
     deserialize_js_from_file("test/test_js_msgs.bin", test_js_msgs);
