@@ -108,11 +108,16 @@ std::vector<rix::msg::geometry::TransformStamped> FKSolver::is_above(const rix::
     for(auto transform : transform_of_interest){
         //std::cout << "14" << std::endl;
         std::vector<rix::msg::geometry::TransformStamped> route;
+        if(transform.child_frame_id == reference_link){
+            route.push_back(transform);
+            return route;
+        }
         //std::cout << "15" << std::endl;
         route = is_above(tf, transform.child_frame_id, reference_link);
         //std::cout << "16" << std::endl;
         if(route.size() != 0){
-            //std::cout << "17" << std::endl;
+            std::cout << "17" << std::endl;
+            route.push_back(transform);
             return route;
         }
     }
@@ -144,17 +149,20 @@ Eigen::Affine3d FKSolver::solve_up(std::vector<rix::msg::geometry::TransformStam
                 still_to_go.push_back(cur_tstamp);
             }
         }
+        
         //std::cout << "27" << std::endl;
         if(tstamp.header.frame_id == "none"){
             //std::cout << "28" << std::endl;
             return Eigen::Affine3d::Identity();
+        }else{
+            std::cout << tstamp.header.frame_id << std::endl;
         }
         
         //std::cout << "29" << std::endl;
         Eigen::Translation3d translation;
-        translation.x() = tstamp.transform.translation.x;
-        translation.y() = tstamp.transform.translation.y;
-        translation.z() = tstamp.transform.translation.z;
+        translation.x() = -1 * tstamp.transform.translation.x;
+        translation.y() = -1 * tstamp.transform.translation.y;
+        translation.z() = -1 * tstamp.transform.translation.z;
 
         Eigen::Quaterniond quat;
         quat.w() = tstamp.transform.rotation.w;
@@ -164,7 +172,7 @@ Eigen::Affine3d FKSolver::solve_up(std::vector<rix::msg::geometry::TransformStam
         Eigen::Matrix3d rot(quat);
 
         Eigen::Affine3d aff;
-        aff = translation * rot * Eigen::Scaling(-1.0);
+        aff = translation * rot; //* Eigen::Scaling(-1.0);
         if(tstamp.child_frame_id == reference_link){
             return aff;
         }
@@ -185,8 +193,10 @@ rix::msg::geometry::TF FKSolver::global_tf() const {
     /**
      * TODO: Generate a global TF message from the tree. This message should
      * contain the global transformation of each link in the tree.
-     */
-    return rix::msg::geometry::TF();
+     */     
+    Tree test_tree = tree;
+    const rix::msg::geometry::TF tf = (const rix::msg::geometry::TF) test_tree.TF();
+    return global_tf(tf);
 }
 
 rix::msg::geometry::TF FKSolver::global_tf(const rix::msg::geometry::TF &tf) {
@@ -194,6 +204,7 @@ rix::msg::geometry::TF FKSolver::global_tf(const rix::msg::geometry::TF &tf) {
      * TODO: Given a TF message, return a new TF message containing the global
      * transformation of each link in the input message.
      */
+    
     return rix::msg::geometry::TF();
 }
 
