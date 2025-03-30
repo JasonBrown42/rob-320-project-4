@@ -37,6 +37,8 @@ class FKSolver {
     /**
      * TODO: Declare any necessary recursive helper functions here.
      */
+    static std::vector<rix::msg::geometry::TransformStamped> is_above(const rix::msg::geometry::TF &tf, const std::string &link_name, const std::string reference_link);
+    static Eigen::Affine3d solve_up(std::vector<rix::msg::geometry::TransformStamped> &tf, const std::string &link_name, const std::string &reference_link);
 };
 
 }  // namespace rdf
