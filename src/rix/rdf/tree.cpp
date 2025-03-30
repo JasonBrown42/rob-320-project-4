@@ -233,22 +233,117 @@ rix::msg::geometry::TF Tree::TF() {
     /**
      * TODO: Generate a TF message from the tree.
      */
+
+    rix::msg::geometry::TF out_tf;
+    std::vector<std::string> names = get_joint_names();
+
+
+    if(has_link("base")){
+        rix::msg::geometry::TransformStamped tsp;
+        const Link lnk = get_link("base");
+        tsp.header.frame_id = "world";
+        tsp.child_frame_id = "base";
+
+        Eigen::Affine3d transf = lnk.get_origin();
+        auto trans = transf.translation();
+        tsp.transform.translation.x = trans[0];
+        tsp.transform.translation.y = trans[1];
+        tsp.transform.translation.z = trans[2];
+        auto rot = transf.rotation();
+
+        // std::cout <<"Rotation out: " << rot << std::endl;
+        Eigen::Quaterniond quat(rot);
+        
+        // std::cout <<"Rotation out: " << quat << std::endl;
+
+        tsp.transform.rotation.w = (float) quat.w();
+        tsp.transform.rotation.x = (float) quat.x();
+        tsp.transform.rotation.y = (float) quat.y();
+        tsp.transform.rotation.z = (float) quat.z();
+
+        out_tf.transforms.push_back(tsp);
+    }
     
-    return rix::msg::geometry::TF();
+
+    for(std::string s : names){
+        rix::msg::geometry::TransformStamped tsp;
+        const Joint jnt = get_joint(s);
+        tsp.header.frame_id = jnt.get_parent();
+        // tsp.header.time.sec = std::time();
+        // tsp.header.time.nsec = std::
+        tsp.child_frame_id = jnt.get_child();
+
+        const Link lnk = get_link(tsp.child_frame_id);
+
+        Eigen::Affine3d transf = lnk.get_origin() *  jnt.get_transform() * jnt.get_origin() ; //jnt.get_origin() *
+        auto trans = transf.translation();
+        tsp.transform.translation.x = trans[0];
+        tsp.transform.translation.y = trans[1];
+        tsp.transform.translation.z = trans[2];
+        auto rot = transf.rotation();
+
+        // std::cout <<"Rotation out: " << rot << std::endl;
+        Eigen::Quaterniond quat(rot);
+        
+        // std::cout <<"Rotation out: " << quat << std::endl;
+ 
+        tsp.transform.rotation.w = (float) quat.w();
+        tsp.transform.rotation.x = (float) quat.x();
+        tsp.transform.rotation.y = (float) quat.y();
+        tsp.transform.rotation.z = (float) quat.z();
+
+        out_tf.transforms.push_back(tsp);
+
+    }
+    return out_tf;
 }
 
 rix::msg::sensor::JS Tree::JS() {
     /**
      * TODO: Generate a JS message from the tree.
      */
+    rix::msg::sensor::JS out_js;
+    std::vector<std::string> names = get_joint_names();
 
-    return rix::msg::sensor::JS();
+    for(std::string name : names){
+        rix::msg::sensor::JointState jst;
+        jst.name = name;
+        Joint jnt = get_joint(name);
+        jst.position = jnt.get_state();
+        jst.velocity = 0.0;
+        jst.effort = 0.0;
+        out_js.joint_states.push_back(jst);
+    }
+
+
+
+    // rix::msg::geometry::TF tf = TF();
+    // for(auto transf : TF.transforms){
+    // // for(std::string n : names){
+    //     rix::msg::sensor::joint_states jntst;
+    //     jntst.name = transf.header.frame_id;
+    //     Joint parent_joint = get_joint(n);
+    //     std::string next_jnt = "start";
+    //     Eigen::Affine3d
+    //     while(next_jnt != "world"){
+    //         next_jnt = transf.header.frame_id;
+            
+    //     }
+    //     out_js.joint_states.push_back(jnt);
+    // }
+    
+    return out_js;
 }
 
 void Tree::set_state(const rix::msg::sensor::JS &js) {
     /**
      * TODO: Set the state of the joints within the tree from a JS message.
      */
+     for(auto jst : js.joint_states){
+        // Joint jnt = get_joint(jst.name);
+        // jnt.set_state(jst.position);
+        get_joint(jst.name).set_state(jst.position);
+     }
 }
 
 }  // namespace rdf

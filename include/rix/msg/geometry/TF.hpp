@@ -15,7 +15,7 @@ namespace geometry {
 
 class TF : public MessageBase {
   public:
-    std::vector<geometry::TransformStamped> transforms;
+    std::vector<geometry::TransformStamped>  transforms;
 
     TF() = default;
     TF(const TF &other) = default;
