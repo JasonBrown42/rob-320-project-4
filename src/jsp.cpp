@@ -34,18 +34,11 @@ using Log = rix::util::Log;
 using namespace nlohmann;
 using namespace rix;
 using namespace rdf;
+
 class JSSub {
     public:
      
-    //  rix::msg::sensor::JS joint_state;
-    //  std::string jrdf_file;
-    // Tree tree;
-    //  const Tree &tree;
-
      JSSub(Tree &tree);
-        
-        // rix::rdf::Tree temp_tree(Json::parse(this->jrdf_file));
-        // tree = temp_tree;
     
      void jsp_callback(const rix::msg::sensor::JS &js);
      rix::msg::sensor::JS get_js();
@@ -56,10 +49,7 @@ class JSSub {
 
 };
 
-JSSub::JSSub(Tree &tree): tree(tree){
-    // this->jrdf_file = jrdf_file;
-    // tree(Json::parse(this->jrdf_file));
-}
+JSSub::JSSub(Tree &tree): tree(tree){}
 
 void JSSub::jsp_callback(const rix::msg::sensor::JS &js){
     this->jsp_callback_mtx.lock();
@@ -69,16 +59,10 @@ void JSSub::jsp_callback(const rix::msg::sensor::JS &js){
 
 rix::msg::sensor::JS JSSub::get_js(){
     this->jsp_callback_mtx.lock();
-    // Tree test_tree = tree;
     rix::msg::sensor::JS out_js = this->tree.JS();
     this->jsp_callback_mtx.unlock();
     return out_js;
 }
-
-
-
-
-
 
 
 int main(int argc, char **argv) {
@@ -108,8 +92,6 @@ int main(int argc, char **argv) {
     json data = json::parse(path);
     Tree tree(data);
     JSSub js_sub(tree);
-
-    // std::shared_ptr<Subscriber> sub = node.subscribe<LidarScan>("lidar_scan", callback);
 
     std::vector<rix::core::Subscriber> twitch;
     for(std::string topic : topics){
