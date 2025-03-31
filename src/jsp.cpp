@@ -30,25 +30,51 @@ using Log = rix::util::Log;
  * TODO: Declare any classes or helper functions you need here.
  */
 
+#include "nlohmann/json.hpp"
+using namespace nlohmann;
+using namespace rix;
+using namespace rdf;
 class JSSub {
+    public:
+     
+    //  rix::msg::sensor::JS joint_state;
+    //  std::string jrdf_file;
+    // Tree tree;
+    //  const Tree &tree;
 
+     JSSub(Tree &tree);
+        
+        // rix::rdf::Tree temp_tree(Json::parse(this->jrdf_file));
+        // tree = temp_tree;
     
-    std::mutex jsp_callback_mtx;
-    // rix::msg::sensor::JS joint_state;
-    std::string jrdf_file;
-    rix::rdf::
+     void jsp_callback(const rix::msg::sensor::JS &js);
+     rix::msg::sensor::JS get_js();
 
+    private:
+     Tree &tree;
+     std::mutex jsp_callback_mtx;
 
-
-    JSSub(const std::string &jrdf_file){
-        this->jrdf_file = jrdf_file;
-
-    }
-    
-    void jsp_callback(const rix::msg::sensor::JS &js){
-
-    }
 };
+
+JSSub::JSSub(Tree &tree): tree(tree){
+    // this->jrdf_file = jrdf_file;
+    // tree(Json::parse(this->jrdf_file));
+}
+
+void JSSub::jsp_callback(const rix::msg::sensor::JS &js){
+    this->jsp_callback_mtx.lock();
+    this->tree.set_state(js);
+    this->jsp_callback_mtx.unlock();
+}
+
+rix::msg::sensor::JS JSSub::get_js(){
+    this->jsp_callback_mtx.lock();
+    // Tree test_tree = tree;
+    rix::msg::sensor::JS out_js = this->tree.JS();
+    this->jsp_callback_mtx.unlock();
+    return out_js;
+}
+
 
 
 
@@ -78,8 +104,33 @@ int main(int argc, char **argv) {
         return -1;
     }
 
+    std::ifstream path(jrdf_file);
+    json data = json::parse(path);
+    Tree tree(data);
+    JSSub js_sub(tree);
 
+    // std::shared_ptr<Subscriber> sub = node.subscribe<LidarScan>("lidar_scan", callback);
 
+    std::vector<rix::core::Subscriber> twitch;
+    for(std::string topic : topics){
+        auto meth = [&](rix::msg::sensor::JS js) {js_sub.jsp_callback(js);};
+        rix::core::Subscriber sub = n.subscribe<rix::msg::sensor::JS>(topic, meth);
+        twitch.push_back(sub);
+    }
+
+    rix::core::Publisher chat = n.advertise<rix::msg::sensor::JS, rix::core::PubImplTCP>("joint_states");
+    
+    n.spin(false);
+
+    rix::util::Rate ratings(rate);
+
+    while(n.ok()){
+        rix::msg::sensor::JS hey = js_sub.get_js();
+        hey.stamp.nsec = (int32_t) rix::util::nanos();
+        hey.stamp.sec = (int32_t)( (float_t) rix::util::millis() / 1000.0);
+        chat.publish(hey);
+        ratings.sleep();
+    }
 
 
     return 0;

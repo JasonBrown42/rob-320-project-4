@@ -106,7 +106,7 @@ bool compare_js_from_offset(const std::vector<JS> &sol_js_msgs, const std::vecto
  * ./build/joint_publisher base_to_upper_arm --rate 1
  * 
  * Terminal 4:
- * ./build/jsp robots/simple_but.json base_to_upper_arm --rate 1
+ * ./build/jsp robots/simple_bot.json base_to_upper_arm --rate 1
  * 
  * Once joint_publisher publishes 10 messages, you can stop the terminals. 
  * 
