@@ -24,9 +24,36 @@
 using CLParser = rix::util::CLParser;
 using Log = rix::util::Log;
 
+
+
 /**
  * TODO: Declare any classes or helper functions you need here.
  */
+
+class JSSub {
+
+    
+    std::mutex jsp_callback_mtx;
+    // rix::msg::sensor::JS joint_state;
+    std::string jrdf_file;
+    rix::rdf::
+
+
+
+    JSSub(const std::string &jrdf_file){
+        this->jrdf_file = jrdf_file;
+
+    }
+    
+    void jsp_callback(const rix::msg::sensor::JS &js){
+
+    }
+};
+
+
+
+
+
 
 int main(int argc, char **argv) {
     CLParser parser("joint_state_publisher", "Publishes header messages");
@@ -44,6 +71,16 @@ int main(int argc, char **argv) {
     /**
      * TODO: Implement the Joint State Publisher
      */
+    rix::core::Node n;
+    bool status = n.init("JSP", hub_ip, RIX_HUB_PORT);
+    if(!status){
+        perror("Failed node init\n");
+        return -1;
+    }
+
+
+
+
 
     return 0;
 }

@@ -204,8 +204,33 @@ rix::msg::geometry::TF FKSolver::global_tf(const rix::msg::geometry::TF &tf) {
      * TODO: Given a TF message, return a new TF message containing the global
      * transformation of each link in the input message.
      */
-    
-    return rix::msg::geometry::TF();
+    std::vector<std::string> link_names;
+    std::vector<std::string> already_used;
+    rix::msg::geometry::TF tf_tree_out;
+    for(auto transform : tf.transforms){
+        link_names.push_back(transform.child_frame_id);
+    }
+    for(std::string name : link_names){
+        rix::msg::geometry::TransformStamped tsp;
+        Eigen::Affine3d trans = solve(tf, name);
+        tsp.header.frame_id = "world";
+        tsp.child_frame_id = name;
+
+        auto translation = trans.translation();
+        tsp.transform.translation.x = translation[0];
+        tsp.transform.translation.y = translation[1];
+        tsp.transform.translation.z = translation[2];
+
+        auto rot = trans.rotation();
+        Eigen::Quaterniond quat(rot);
+        tsp.transform.rotation.w = (float) quat.w();
+        tsp.transform.rotation.x = (float) quat.x();
+        tsp.transform.rotation.y = (float) quat.y();
+        tsp.transform.rotation.z = (float) quat.z();
+
+        tf_tree_out.transforms.push_back(tsp);
+    }
+    return tf_tree_out;
 }
 
 }  // namespace rdf
