@@ -77,9 +77,9 @@ using CLParser = rix::util::CLParser;
  }
  
  rix::msg::geometry::TF RSSub::get_tf(){
-     this->rsp_callback_mtx.lock();
+    //  this->rsp_callback_mtx.lock();
      rix::msg::geometry::TF out_tf = this->tree.TF();
-     this->rsp_callback_mtx.unlock();
+    //  this->rsp_callback_mtx.unlock();
      return out_tf;
  }
 
