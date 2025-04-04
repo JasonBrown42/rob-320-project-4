@@ -1,0 +1,627 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Linux - 4.18.0-553.34.1.el8_10.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/um/gcc-11.3.0/bin/gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/3.26.5/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/um/gcc-11.3.0/bin/g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/3.26.5/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-sRlOci"
+      binary: "/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-sRlOci"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-sRlOci
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d945b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d945b.dir/build.make CMakeFiles/cmTC_d945b.dir/build
+        gmake[1]: Entering directory '/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-sRlOci'
+        Building C object CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o
+        /usr/um/gcc-11.3.0/bin/gcc   -v -o CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/um/gcc-11.3.0/bin/gcc
+        Target: x86_64-pc-linux-gnu
+        Configured with: ../gcc-11.3.0/configure --prefix=/usr/um/gcc-11.3.0
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 11.3.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d945b.dir/'
+         /opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/cc1 -quiet -v -iprefix /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d945b.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccc0c2bz.s
+        GNU C17 (GCC) version 11.3.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 11.3.0, GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.1.0, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include"
+        ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed"
+        ignoring nonexistent directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../x86_64-pc-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include
+         /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed
+         /usr/local/include
+         /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../include
+         /usr/include
+        End of search list.
+        GNU C17 (GCC) version 11.3.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 11.3.0, GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.1.0, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: c34ee22ab7789fbfa1f71eb96d7b1ec2
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d945b.dir/'
+         as -v --64 -o CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o /tmp/ccc0c2bz.s
+        GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-125.el8_10
+        COMPILER_PATH=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/
+        LIBRARY_PATH=/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_d945b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d945b.dir/link.txt --verbose=1
+        /usr/um/gcc-11.3.0/bin/gcc  -v CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o -o cmTC_d945b 
+        Using built-in specs.
+        COLLECT_GCC=/usr/um/gcc-11.3.0/bin/gcc
+        COLLECT_LTO_WRAPPER=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: ../gcc-11.3.0/configure --prefix=/usr/um/gcc-11.3.0
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 11.3.0 (GCC) 
+        COMPILER_PATH=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/
+        LIBRARY_PATH=/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d945b' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d945b.'
+         /opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/collect2 -plugin /opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/liblto_plugin.so -plugin-opt=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTPL29J.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d945b /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0 -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../.. CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d945b' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d945b.'
+        gmake[1]: Leaving directory '/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-sRlOci'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include]
+          add: [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed]
+          add: [/usr/local/include]
+          add: [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include] ==> [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/include]
+        collapse include dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed] ==> [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../include] ==> [/opt/caen/um/gcc-11.3.0/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/include;/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed;/usr/local/include;/opt/caen/um/gcc-11.3.0/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-sRlOci]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d945b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d945b.dir/build.make CMakeFiles/cmTC_d945b.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-sRlOci']
+        ignore line: [Building C object CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/um/gcc-11.3.0/bin/gcc   -v -o CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/um/gcc-11.3.0/bin/gcc]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ../gcc-11.3.0/configure --prefix=/usr/um/gcc-11.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.3.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d945b.dir/']
+        ignore line: [ /opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/cc1 -quiet -v -iprefix /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d945b.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccc0c2bz.s]
+        ignore line: [GNU C17 (GCC) version 11.3.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.3.0  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.1.0  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include"]
+        ignore line: [ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include]
+        ignore line: [ /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (GCC) version 11.3.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.3.0  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.1.0  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: c34ee22ab7789fbfa1f71eb96d7b1ec2]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d945b.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o /tmp/ccc0c2bz.s]
+        ignore line: [GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-125.el8_10]
+        ignore line: [COMPILER_PATH=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_d945b]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d945b.dir/link.txt --verbose=1]
+        ignore line: [/usr/um/gcc-11.3.0/bin/gcc  -v CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o -o cmTC_d945b ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/um/gcc-11.3.0/bin/gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ../gcc-11.3.0/configure --prefix=/usr/um/gcc-11.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.3.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d945b' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_d945b.']
+        link line: [ /opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/collect2 -plugin /opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/liblto_plugin.so -plugin-opt=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTPL29J.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d945b /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0 -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../.. CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccTPL29J.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_d945b] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o] ==> obj [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o]
+          arg [-L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0] ==> dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0]
+          arg [-L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc] ==> dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc]
+          arg [-L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64] ==> dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../..] ==> dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../..]
+          arg [CMakeFiles/cmTC_d945b.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o] ==> obj [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o] ==> [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o]
+        collapse obj [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o] ==> [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0] ==> [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0]
+        collapse library dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc] ==> [/opt/caen/um/gcc-11.3.0/lib/gcc]
+        collapse library dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64] ==> [/opt/caen/um/gcc-11.3.0/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../..] ==> [/opt/caen/um/gcc-11.3.0/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o;/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0;/opt/caen/um/gcc-11.3.0/lib/gcc;/opt/caen/um/gcc-11.3.0/lib64;/lib64;/usr/lib64;/opt/caen/um/gcc-11.3.0/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-tBWmMZ"
+      binary: "/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-tBWmMZ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-tBWmMZ
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6290e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6290e.dir/build.make CMakeFiles/cmTC_6290e.dir/build
+        gmake[1]: Entering directory '/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-tBWmMZ'
+        Building CXX object CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/um/gcc-11.3.0/bin/g++   -v -o CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/um/gcc-11.3.0/bin/g++
+        Target: x86_64-pc-linux-gnu
+        Configured with: ../gcc-11.3.0/configure --prefix=/usr/um/gcc-11.3.0
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 11.3.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6290e.dir/'
+         /opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/cc1plus -quiet -v -iprefix /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/ -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_6290e.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/cc81xjAN.s
+        GNU C++17 (GCC) version 11.3.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 11.3.0, GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.1.0, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0"
+        ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0/x86_64-pc-linux-gnu"
+        ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0/backward"
+        ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include"
+        ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed"
+        ignoring nonexistent directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../x86_64-pc-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0
+         /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0/x86_64-pc-linux-gnu
+         /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0/backward
+         /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include
+         /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed
+         /usr/local/include
+         /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../include
+         /usr/include
+        End of search list.
+        GNU C++17 (GCC) version 11.3.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 11.3.0, GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.1.0, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: ec146b60a3054fc3e5f66aa43aed3b91
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6290e.dir/'
+         as -v --64 -o CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc81xjAN.s
+        GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-125.el8_10
+        COMPILER_PATH=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/
+        LIBRARY_PATH=/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_6290e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6290e.dir/link.txt --verbose=1
+        /usr/um/gcc-11.3.0/bin/g++  -v CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_6290e 
+        Using built-in specs.
+        COLLECT_GCC=/usr/um/gcc-11.3.0/bin/g++
+        COLLECT_LTO_WRAPPER=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: ../gcc-11.3.0/configure --prefix=/usr/um/gcc-11.3.0
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 11.3.0 (GCC) 
+        COMPILER_PATH=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/
+        LIBRARY_PATH=/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6290e' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6290e.'
+         /opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/collect2 -plugin /opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/liblto_plugin.so -plugin-opt=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYFscVd.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_6290e /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0 -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../.. CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6290e' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6290e.'
+        gmake[1]: Leaving directory '/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-tBWmMZ'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0]
+          add: [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0/x86_64-pc-linux-gnu]
+          add: [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0/backward]
+          add: [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include]
+          add: [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed]
+          add: [/usr/local/include]
+          add: [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0] ==> [/opt/caen/um/gcc-11.3.0/include/c++/11.3.0]
+        collapse include dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0/x86_64-pc-linux-gnu] ==> [/opt/caen/um/gcc-11.3.0/include/c++/11.3.0/x86_64-pc-linux-gnu]
+        collapse include dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0/backward] ==> [/opt/caen/um/gcc-11.3.0/include/c++/11.3.0/backward]
+        collapse include dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include] ==> [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/include]
+        collapse include dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed] ==> [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../include] ==> [/opt/caen/um/gcc-11.3.0/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/opt/caen/um/gcc-11.3.0/include/c++/11.3.0;/opt/caen/um/gcc-11.3.0/include/c++/11.3.0/x86_64-pc-linux-gnu;/opt/caen/um/gcc-11.3.0/include/c++/11.3.0/backward;/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/include;/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed;/usr/local/include;/opt/caen/um/gcc-11.3.0/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-tBWmMZ]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6290e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6290e.dir/build.make CMakeFiles/cmTC_6290e.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-tBWmMZ']
+        ignore line: [Building CXX object CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/um/gcc-11.3.0/bin/g++   -v -o CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/um/gcc-11.3.0/bin/g++]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ../gcc-11.3.0/configure --prefix=/usr/um/gcc-11.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.3.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6290e.dir/']
+        ignore line: [ /opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/cc1plus -quiet -v -iprefix /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/ -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_6290e.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/cc81xjAN.s]
+        ignore line: [GNU C++17 (GCC) version 11.3.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.3.0  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.1.0  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0"]
+        ignore line: [ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0/x86_64-pc-linux-gnu"]
+        ignore line: [ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0/backward"]
+        ignore line: [ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include"]
+        ignore line: [ignoring duplicate directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0]
+        ignore line: [ /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0/x86_64-pc-linux-gnu]
+        ignore line: [ /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../include/c++/11.3.0/backward]
+        ignore line: [ /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include]
+        ignore line: [ /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/include-fixed]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/../../include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (GCC) version 11.3.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.3.0  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.1.0  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: ec146b60a3054fc3e5f66aa43aed3b91]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6290e.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc81xjAN.s]
+        ignore line: [GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-125.el8_10]
+        ignore line: [COMPILER_PATH=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_6290e]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6290e.dir/link.txt --verbose=1]
+        ignore line: [/usr/um/gcc-11.3.0/bin/g++  -v CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_6290e ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/um/gcc-11.3.0/bin/g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ../gcc-11.3.0/configure --prefix=/usr/um/gcc-11.3.0]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.3.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_6290e' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_6290e.']
+        link line: [ /opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/collect2 -plugin /opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/liblto_plugin.so -plugin-opt=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYFscVd.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_6290e /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0 -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../.. CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/opt/caen/um/gcc-11.3.0/bin/../libexec/gcc/x86_64-pc-linux-gnu/11.3.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccYFscVd.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_6290e] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o] ==> obj [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o]
+          arg [-L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0] ==> dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0]
+          arg [-L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc] ==> dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc]
+          arg [-L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64] ==> dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../..] ==> dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../..]
+          arg [CMakeFiles/cmTC_6290e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o] ==> obj [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o] ==> [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o]
+        collapse obj [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o] ==> [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0] ==> [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0]
+        collapse library dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc] ==> [/opt/caen/um/gcc-11.3.0/lib/gcc]
+        collapse library dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../../../lib64] ==> [/opt/caen/um/gcc-11.3.0/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/opt/caen/um/gcc-11.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/11.3.0/../../..] ==> [/opt/caen/um/gcc-11.3.0/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtbegin.o;/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/opt/caen/um/gcc-11.3.0/lib/gcc/x86_64-pc-linux-gnu/11.3.0;/opt/caen/um/gcc-11.3.0/lib/gcc;/opt/caen/um/gcc-11.3.0/lib64;/lib64;/usr/lib64;/opt/caen/um/gcc-11.3.0/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/usr/share/cmake/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "googletest/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "googletest/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-AhIBxm"
+      binary: "/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-AhIBxm"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: /home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-AhIBxm
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_36fd2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_36fd2.dir/build.make CMakeFiles/cmTC_36fd2.dir/build
+        gmake[1]: Entering directory '/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-AhIBxm'
+        Building C object CMakeFiles/cmTC_36fd2.dir/src.c.o
+        /usr/um/gcc-11.3.0/bin/gcc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_36fd2.dir/src.c.o -c /home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-AhIBxm/src.c
+        Linking C executable cmTC_36fd2
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36fd2.dir/link.txt --verbose=1
+        /usr/um/gcc-11.3.0/bin/gcc CMakeFiles/cmTC_36fd2.dir/src.c.o -o cmTC_36fd2 
+        CMakeFiles/cmTC_36fd2.dir/src.c.o: In function `main':
+        src.c:(.text+0x2d): undefined reference to `pthread_create'
+        src.c:(.text+0x39): undefined reference to `pthread_detach'
+        src.c:(.text+0x45): undefined reference to `pthread_cancel'
+        src.c:(.text+0x56): undefined reference to `pthread_join'
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_36fd2.dir/build.make:99: cmTC_36fd2] Error 1
+        gmake[1]: Leaving directory '/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-AhIBxm'
+        gmake: *** [Makefile:127: cmTC_36fd2/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "/usr/share/cmake/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/usr/share/cmake/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "googletest/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "googletest/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-Hz7djv"
+      binary: "/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-Hz7djv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: /home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-Hz7djv
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_73803/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_73803.dir/build.make CMakeFiles/cmTC_73803.dir/build
+        gmake[1]: Entering directory '/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-Hz7djv'
+        Building C object CMakeFiles/cmTC_73803.dir/CheckFunctionExists.c.o
+        /usr/um/gcc-11.3.0/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_73803.dir/CheckFunctionExists.c.o -c /home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-Hz7djv/CheckFunctionExists.c
+        Linking C executable cmTC_73803
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73803.dir/link.txt --verbose=1
+        /usr/um/gcc-11.3.0/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_73803.dir/CheckFunctionExists.c.o -o cmTC_73803  -lpthreads 
+        /usr/bin/ld: cannot find -lpthreads
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [CMakeFiles/cmTC_73803.dir/build.make:99: cmTC_73803] Error 1
+        gmake[1]: Leaving directory '/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-Hz7djv'
+        gmake: *** [Makefile:127: cmTC_73803/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "/usr/share/cmake/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/usr/share/cmake/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "googletest/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "googletest/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-njK6Zm"
+      binary: "/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-njK6Zm"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: /home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-njK6Zm
+        
+        Run Build Command(s):/usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_be37b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_be37b.dir/build.make CMakeFiles/cmTC_be37b.dir/build
+        gmake[1]: Entering directory '/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-njK6Zm'
+        Building C object CMakeFiles/cmTC_be37b.dir/CheckFunctionExists.c.o
+        /usr/um/gcc-11.3.0/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_be37b.dir/CheckFunctionExists.c.o -c /home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-njK6Zm/CheckFunctionExists.c
+        Linking C executable cmTC_be37b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_be37b.dir/link.txt --verbose=1
+        /usr/um/gcc-11.3.0/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_be37b.dir/CheckFunctionExists.c.o -o cmTC_be37b  -lpthread 
+        gmake[1]: Leaving directory '/home/jaybrow/rob320/projects/rob-320-project-4/debug/CMakeFiles/CMakeScratch/TryCompile-njK6Zm'
+        
+      exitCode: 0
+...

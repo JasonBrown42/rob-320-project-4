@@ -82,5 +82,7 @@ int main(int argc, char **argv) {
         rate.sleep();
     }
 
+    Node::shutdown();
+
     return 0;
 }

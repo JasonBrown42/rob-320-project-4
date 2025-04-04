@@ -1,0 +1,1 @@
+/usr/um/gcc-11.3.0/bin/g++ -g CMakeFiles/compare_jsp_test.dir/test/manual_tests/compare_jsp_test.cpp.o -o compare_jsp_test  librixrdf.a /home/jaybrow/rob320/projects/rob-320-project-4/lib/librixcore.a /home/jaybrow/rob320/projects/rob-320-project-4/lib/librixutil.a /home/jaybrow/rob320/projects/rob-320-project-4/lib/librixipc.a -lpthread 

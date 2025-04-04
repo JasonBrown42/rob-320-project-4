@@ -108,8 +108,9 @@ int main(int argc, char **argv) {
 
     while(n.ok()){
         rix::msg::sensor::JS hey = js_sub.get_js();
-        hey.stamp.nsec = (int32_t) rix::util::nanos();
-        hey.stamp.sec = (int32_t)( (float_t) rix::util::millis() / 1000.0);
+        int64_t nanos = rix::util::nanos();
+        hey.stamp.sec = (int32_t) (nanos / 1000000000);
+        hey.stamp.nsec = (int32_t) (nanos % 1000000000);
         chat.publish(hey);
         ratings.sleep();
     }

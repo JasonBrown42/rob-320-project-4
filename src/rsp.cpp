@@ -62,14 +62,16 @@ using CLParser = rix::util::CLParser;
  
  void RSSub::jsp_callback(const rix::msg::sensor::JS &js){
      this->rsp_callback_mtx.lock();
-    //  std::cout << "Saw message, before publish" << std::endl;
-     int64_t cur_time = stopwatch.elapsed_ms();
-     if(cur_time - last_ms > (int64_t) (1000/rate)){
+     std::cout << "Saw message, before publish" << std::endl;
+    //  int64_t cur_time = stopwatch.elapsed_ms();
+    int64_t cur_time = js.stamp.sec * 1e9 + js.stamp.nsec;
+     if(cur_time - this->last_ms > (int64_t) (1e9/rate)){
         this->tree.set_state(js);
-        // std::cout << "About to try to publish" << std::endl;
+        std::cout << "About to try to publish" << std::endl;
         rix::msg::geometry::TF msg = this->get_tf();
         this->pub.publish(msg);
-        last_ms = cur_time;
+        std::cout << "Just finished the publish call" << std::endl;
+        this->last_ms = cur_time;
      }
      
 
@@ -87,7 +89,7 @@ using CLParser = rix::util::CLParser;
     stopwatch.start();
     bool status = n.init(name, hub_ip, hub_port);
 
-    method = [&](rix::msg::sensor::JS js) {this->jsp_callback(js);};
+    method = [&](const rix::msg::sensor::JS &js) {this->jsp_callback(js);};
     sub = n.subscribe<rix::msg::sensor::JS>("joint_states", method);
     pub = n.advertise<rix::msg::geometry::TF, rix::core::PubImplTCP>("tf");
 
@@ -95,12 +97,12 @@ using CLParser = rix::util::CLParser;
  }
 
  void RSSub::spin(){
-    n.spin(false);
-    rix::util::Rate ratings(1);
-    while(n.ok()){
-        // std::cout << "Spinning round and round" << std::endl;
-        ratings.sleep();
-    }
+    n.spin(true);
+    // rix::util::Rate ratings(1);
+    // while(n.ok()){
+    //     // std::cout << "Spinning round and round" << std::endl;
+    //     ratings.sleep();
+    // }
 
  }
  

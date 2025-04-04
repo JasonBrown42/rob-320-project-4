@@ -1,0 +1,1 @@
+/usr/um/gcc-11.3.0/bin/g++ -g CMakeFiles/joint_test.dir/test/unit_tests/joint_test.cpp.o -o joint_test  librixrdf.a lib/libgtest_main.a /home/jaybrow/rob320/projects/rob-320-project-4/lib/librixcore.a /home/jaybrow/rob320/projects/rob-320-project-4/lib/librixutil.a /home/jaybrow/rob320/projects/rob-320-project-4/lib/librixipc.a -lpthread lib/libgtest.a -lpthread 

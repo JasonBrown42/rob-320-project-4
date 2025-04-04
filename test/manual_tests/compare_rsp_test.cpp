@@ -193,6 +193,7 @@ int main() {
     std::vector<TF> sol_tf_msgs;
     deserialize_tf_from_file("test/bin/sol_tf_msgs.bin", sol_tf_msgs);
 
+    std::cout << "This might be the problem" << std::endl;
 
     std::vector<TF> test_tf_msgs;
     deserialize_tf_from_file("test/test_tf_msgs.bin", test_tf_msgs);

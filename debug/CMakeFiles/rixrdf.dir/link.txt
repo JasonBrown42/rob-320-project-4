@@ -1,0 +1,2 @@
+/usr/bin/ar qc librixrdf.a CMakeFiles/rixrdf.dir/src/rix/rdf/util.cpp.o CMakeFiles/rixrdf.dir/src/rix/rdf/link.cpp.o CMakeFiles/rixrdf.dir/src/rix/rdf/joint.cpp.o CMakeFiles/rixrdf.dir/src/rix/rdf/tree.cpp.o CMakeFiles/rixrdf.dir/src/rix/rdf/fk_solver.cpp.o
+/usr/bin/ranlib librixrdf.a
